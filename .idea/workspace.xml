@@ -4,60 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e38f487c-b656-4ac5-8e72-b48b70dc910c" name="Changes" comment="initial">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/App.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/constants/api.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/constants/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/constants/requestStatus.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/constants/reviews.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/constants/routes.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/features/reviews/actionTypes.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/features/reviews/selectors.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/features/reviews/slice.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/features/reviews/types.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/AIRBNB.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/BOOKINGCOM.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/HOLIDU.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/background.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/thumb-down.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/thumb-up.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/Home/Home.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/Home/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/List/List.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/List/List.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/List/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/Review/Review.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/Review/Review.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/Review/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/Reviews/Reviews.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/Reviews/Reviews.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/Reviews/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/getScores.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.eslintignore" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintignore" afterDir="false" />
+    <list default="true" id="e38f487c-b656-4ac5-8e72-b48b70dc910c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navbar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/counter/Counter.spec.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/counter/Counter.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/counter/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/counter/actionTypes.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/counter/counterReducer.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/counter/counterReducer.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/counter/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/reviews/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/counter/selectors.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/counter/types.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/About.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Home.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,8 +49,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1643727937322</updated>
-      <workItem from="1643727939702" duration="5085000" />
+      <workItem from="1643727939702" duration="5130000" />
     </task>
+    <task id="LOCAL-00001" summary="initial">
+      <created>1643733102108</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1643733102108</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
