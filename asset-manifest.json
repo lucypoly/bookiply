@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/bookiply/static/css/main.c1dcded3.css",
+    "main.js": "/bookiply/static/js/main.5c433779.js",
+    "static/media/background.png": "/bookiply/static/media/background.73d5f8b0143508b578a7.png",
+    "index.html": "/bookiply/index.html",
+    "main.c1dcded3.css.map": "/bookiply/static/css/main.c1dcded3.css.map",
+    "main.5c433779.js.map": "/bookiply/static/js/main.5c433779.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c1dcded3.css",
+    "static/js/main.5c433779.js"
+  ]
+}
