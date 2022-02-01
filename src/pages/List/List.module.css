@@ -1,0 +1,12 @@
+.header {
+  margin: 0;
+  padding: 20px 0;
+  color: white;
+}
+
+.button {
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  background: transparent;
+}
