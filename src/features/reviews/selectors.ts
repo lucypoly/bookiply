@@ -17,3 +17,8 @@ export const selectItems = createSelector(
   selectReviews,
   ({ items }): Review[] => items
 )
+
+export const selectTotal = createSelector(
+  selectReviews,
+  ({ total }): number => total
+)

@@ -2,8 +2,9 @@ import { Channel, RequestStatus } from '../../constants'
 
 export interface ReviewState {
   items: Review[]
+  total: number
   filters: Filters
-  page: number
+  page: number | null
   status: RequestStatus
   error: unknown
 }
@@ -25,7 +26,7 @@ export interface Filters {
 }
 
 export interface PaginationPayload {
-  page: number
+  page: number | null
 }
 
 export interface FilterPayload {
@@ -39,5 +40,9 @@ export interface ReturnFilterPayload {
 
 export interface ReturnPaginationPayload {
   data: Review[]
-  page: number
+  page: number | null
+}
+
+export interface ReturnFetchPayload {
+  total: number
 }

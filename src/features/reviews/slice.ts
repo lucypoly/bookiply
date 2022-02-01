@@ -1,4 +1,3 @@
-import axios from 'axios'
 import {
   createAsyncThunk,
   createSlice,
@@ -6,34 +5,19 @@ import {
   isRejected,
 } from '@reduxjs/toolkit'
 
-import { FILTER_REVIEWS, PAGINATE_REVIEWS } from './actionTypes'
+import { FETCH_REVIEWS, FILTER_REVIEWS, PAGINATE_REVIEWS } from './actionTypes'
 import {
   FilterPayload,
   PaginationPayload,
+  ReturnFetchPayload,
   ReturnFilterPayload,
   ReturnPaginationPayload,
   Review,
   ReviewState,
 } from './types'
 import { RootState } from '../../store'
-import { getScores } from '../../utils'
-import { API, RequestStatus } from '../../constants'
-
-const getReviews = async (payload: PaginationPayload & FilterPayload) => {
-  const { page, filters } = payload
-
-  const channelStr = filters.channels
-    ?.map((item) => `&channel=${item}`)
-    .join('')
-  const scores = getScores(filters.score)
-    ?.map((item) => `&score=${item}`)
-    .join('')
-
-  const response = await axios.get(
-    `${API}reviews?_page=${page}${channelStr}${scores}`
-  )
-  return response
-}
+import { RequestStatus } from '../../constants'
+import { getReviews } from './helpers'
 
 export const paginateReviews = createAsyncThunk<
   ReturnPaginationPayload,
@@ -55,6 +39,22 @@ export const paginateReviews = createAsyncThunk<
     })
   }
 })
+
+export const fetchReviews = createAsyncThunk<ReturnFetchPayload>(
+  FETCH_REVIEWS,
+  async (_payload, thunkApi) => {
+    try {
+      const response = await getReviews()
+      return {
+        total: (response.data as Review[]).length,
+      }
+    } catch (err) {
+      return thunkApi.rejectWithValue({
+        message: 'Failed to fetch reviews.',
+      })
+    }
+  }
+)
 
 export const filterReviews = createAsyncThunk<
   ReturnFilterPayload,
@@ -79,14 +79,19 @@ export const filterReviews = createAsyncThunk<
 
 export const initialReviewState: ReviewState = {
   items: [],
+  total: 0,
   filters: { score: null, channels: null },
-  page: 1,
+  page: null,
   status: RequestStatus.NotAsked,
   error: null,
 }
 
-const isRejectedAction = isRejected(paginateReviews, filterReviews)
-const isPendingAction = isPending(paginateReviews, filterReviews)
+const isRejectedAction = isRejected(
+  paginateReviews,
+  filterReviews,
+  fetchReviews
+)
+const isPendingAction = isPending(paginateReviews, filterReviews, fetchReviews)
 
 export const reviewSlice = createSlice({
   name: 'reviews',
@@ -101,6 +106,10 @@ export const reviewSlice = createSlice({
     builder.addCase(filterReviews.fulfilled, (state, { payload }) => {
       state.items = payload.data
       state.filters = payload.filters
+      state.status = RequestStatus.Succeed
+    })
+    builder.addCase(fetchReviews.fulfilled, (state, { payload }) => {
+      state.total = payload.total
       state.status = RequestStatus.Succeed
     })
     builder.addMatcher(isRejectedAction, (state, { error }) => {

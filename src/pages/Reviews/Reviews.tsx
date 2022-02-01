@@ -1,36 +1,31 @@
-import React, { Fragment, useEffect } from 'react'
+import React, { Fragment, useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Paper } from '@mui/material'
+import { nanoid } from 'nanoid'
 
-import { filterReviews } from '../../features/reviews/slice'
-import {
-  selectError,
-  selectItems,
-  selectStatus,
-} from '../../features/reviews/selectors'
-import { Review } from '../Review/Review'
-import { Channel } from '../../constants'
+import { fetchReviews, paginateReviews } from '../../features/reviews/slice'
+import { selectItems, selectTotal } from '../../features/reviews/selectors'
+import { Review } from '../Review'
+import { Pagination } from '../../components/Pagination'
 
 import styles from './Reviews.module.css'
+import { PER_PAGE } from '../../constants'
 
 export const Reviews: React.FC = () => {
   const dispatch = useDispatch()
   const items = useSelector(selectItems)
-  const status = useSelector(selectStatus)
-  const error = useSelector(selectError)
+  const total = useSelector(selectTotal)
+
+  const [page, setPage] = useState(1)
 
   useEffect(() => {
-    dispatch(
-      filterReviews({
-        filters: { channels: [Channel.HOLIDU, Channel.AIRBNB], score: 3.1 },
-      })
-    )
+    dispatch(fetchReviews())
+    dispatch(paginateReviews({ page }))
   }, [])
 
-  if (items?.length) {
-    console.log(items)
-    console.log(status)
-    console.log(error)
+  const handlePageChange = (curPage: number) => {
+    setPage(curPage)
+    dispatch(paginateReviews({ page: curPage }))
   }
 
   return (
@@ -38,9 +33,10 @@ export const Reviews: React.FC = () => {
       <p className={styles.id}>ID: 091021</p>
       <h1 className={styles.header}>La Casa de las Flores</h1>
       <Paper className={styles.paper}>
-        <h1 className={styles.title}>{items?.length} reviews</h1>
+        <h1 className={styles.title}>{total} reviews</h1>
         {items.map((item) => (
           <Review
+            key={nanoid()}
             headline={item.headline}
             score={item.score}
             author={item.author}
@@ -51,6 +47,11 @@ export const Reviews: React.FC = () => {
             publishedAt={item.publishedAt}
           />
         ))}
+        <Pagination
+          current={page}
+          pages={total / PER_PAGE}
+          onChange={handlePageChange}
+        />
       </Paper>
     </Fragment>
   )

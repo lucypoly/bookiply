@@ -5,7 +5,7 @@ import Button from '@mui/material/Button'
 import Toolbar from '@mui/material/Toolbar'
 import { Container } from '@mui/material'
 
-import { Routes } from '../constants/routes'
+import { Routes } from '../constants'
 
 export const Navbar: React.FC = () => {
   const history = useHistory()
