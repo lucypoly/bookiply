@@ -1,15 +1,11 @@
-import { combineReducers, createStore } from 'redux'
-import { devToolsEnhancer } from 'redux-devtools-extension'
-import { CounterReducer } from './features/counter'
+import { configureStore } from '@reduxjs/toolkit'
+import { reviewSlice } from './features/reviews/slice'
 
-/* Create root reducer, containing all features of the application */
-const rootReducer = combineReducers({
-  count: CounterReducer,
+const store = configureStore({
+  reducer: {
+    reviews: reviewSlice.reducer,
+  },
 })
 
-const store = createStore(
-  rootReducer,
-  /* preloadedState, */ devToolsEnhancer({})
-)
-
+export type RootState = ReturnType<typeof store.getState>
 export default store
