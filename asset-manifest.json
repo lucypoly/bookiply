@@ -1,14 +1,19 @@
 {
   "files": {
-    "main.css": "/bookiply/static/css/main.c1dcded3.css",
-    "main.js": "/bookiply/static/js/main.5c433779.js",
+    "main.css": "/bookiply/static/css/main.ed6a708e.css",
+    "main.js": "/bookiply/static/js/main.ae1fee03.js",
     "static/media/background.png": "/bookiply/static/media/background.73d5f8b0143508b578a7.png",
+    "static/media/BOOKINGCOM.svg": "/bookiply/static/media/BOOKINGCOM.8ea33a55166523bc219b71f9d5c92652.svg",
+    "static/media/AIRBNB.svg": "/bookiply/static/media/AIRBNB.f8f22ed65705d79d11a09c593946c188.svg",
+    "static/media/HOLIDU.svg": "/bookiply/static/media/HOLIDU.d01da7f62e3f41136bf5c320184b78b9.svg",
+    "static/media/thumb-up.svg": "/bookiply/static/media/thumb-up.d8060c3ef66a0ca88b584f493d18058b.svg",
+    "static/media/thumb-down.svg": "/bookiply/static/media/thumb-down.f654ac47acb71cfbbc37d6597e6f22c3.svg",
     "index.html": "/bookiply/index.html",
-    "main.c1dcded3.css.map": "/bookiply/static/css/main.c1dcded3.css.map",
-    "main.5c433779.js.map": "/bookiply/static/js/main.5c433779.js.map"
+    "main.ed6a708e.css.map": "/bookiply/static/css/main.ed6a708e.css.map",
+    "main.ae1fee03.js.map": "/bookiply/static/js/main.ae1fee03.js.map"
   },
   "entrypoints": [
-    "static/css/main.c1dcded3.css",
-    "static/js/main.5c433779.js"
+    "static/css/main.ed6a708e.css",
+    "static/js/main.ae1fee03.js"
   ]
 }
