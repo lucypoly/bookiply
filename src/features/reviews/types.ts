@@ -22,7 +22,7 @@ export interface Review {
 
 export interface Filters {
   score: number | null
-  channels: Channel[] | null
+  channels: Channel[]
 }
 
 export interface PaginationPayload {
@@ -34,8 +34,8 @@ export interface FilterPayload {
 }
 
 export interface ReturnFilterPayload {
-  data: Review[]
   filters: Filters
+  total: number
 }
 
 export interface ReturnPaginationPayload {

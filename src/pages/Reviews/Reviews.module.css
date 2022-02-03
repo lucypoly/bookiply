@@ -17,9 +17,25 @@
 .paper {
   margin-top: 20px;
   padding: 25px;
-  position: absolute;
+  border-radius: 10px;
+  border: 1px solid #e1e4e7;
+  background: white;
 }
 
 .title {
   color: #173753;
+  margin: 0 0 10px 2px;
+}
+
+.reviews {
+  margin-top: 40px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+}
+
+.empty {
+  text-align: center;
 }

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useCallback } from 'react'
 import { Pagination as MuiPagination } from '@mui/material'
 
 interface PaginationProps {
@@ -12,9 +12,12 @@ export const Pagination: React.FC<PaginationProps> = ({
   pages,
   onChange,
 }) => {
-  const handleChange = (e: React.ChangeEvent<unknown>, page: number) => {
-    onChange(page)
-  }
+  const handleChange = useCallback(
+    (e: React.ChangeEvent<unknown>, page: number) => {
+      onChange(page)
+    },
+    [onChange]
+  )
 
   return (
     <MuiPagination

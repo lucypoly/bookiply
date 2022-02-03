@@ -1,0 +1,17 @@
+.filters {
+  display: flex;
+}
+
+.score {
+  width: 50%;
+  margin-right: 20px;
+}
+
+.channels {
+  width: 50%;
+  margin-left: 20px;
+}
+
+.label {
+  margin-bottom: 8px;
+}

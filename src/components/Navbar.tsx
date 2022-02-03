@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useCallback } from 'react'
 import { useHistory } from 'react-router-dom'
 import AppBar from '@mui/material/AppBar'
 import Button from '@mui/material/Button'
@@ -10,9 +10,9 @@ import { Routes } from '../constants'
 export const Navbar: React.FC = () => {
   const history = useHistory()
 
-  const handleClick = () => {
+  const handleClick = useCallback(() => {
     history.push(Routes.Home)
-  }
+  }, [history])
 
   return (
     <AppBar position="static">

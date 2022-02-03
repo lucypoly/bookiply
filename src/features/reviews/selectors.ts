@@ -1,4 +1,4 @@
-import { Review } from './types'
+import { Filters, Review } from './types'
 import { RootState } from '../../store'
 import { createSelector } from '@reduxjs/toolkit'
 import { RequestStatus } from '../../constants'
@@ -16,6 +16,10 @@ export const selectError = createSelector(
 export const selectItems = createSelector(
   selectReviews,
   ({ items }): Review[] => items
+)
+export const selectFilters = createSelector(
+  selectReviews,
+  ({ filters }): Filters => filters
 )
 
 export const selectTotal = createSelector(

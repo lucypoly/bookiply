@@ -8,28 +8,31 @@ export const getReviews = async (
 ) => {
   let url = `${API}reviews`
 
-  if (payload) {
-    const { page, filters } = payload
-    const { score, channels } = filters
-    url += '?'
+  // We should not show reviews without at least one channel selected
+  if (payload?.filters.channels.length) {
+    if (payload) {
+      const { page, filters } = payload
+      const { score, channels } = filters
+      url += '?'
 
-    if (page !== null) {
-      url += `_page=${page}`
-    }
-    if (score !== null) {
-      const scores = getScores(filters.score)
-        ?.map((item) => `&score=${item}`)
-        .join('')
+      if (page !== null) {
+        url += `_page=${page}`
+      }
+      if (score !== null) {
+        const scores = getScores(filters.score)
+          ?.map((item) => `&score=${item}`)
+          .join('')
 
-      url += `&score=${scores}`
-    }
-    if (channels !== null) {
-      const channelStr = filters.channels
-        ?.map((item) => `&channel=${item}`)
-        .join('')
+        url += `&score=${scores}`
+      }
+      if (channels.length) {
+        const channelStr = filters.channels
+          ?.map((item) => `&channel=${item}`)
+          .join('')
 
-      url += `&channel=${channelStr}`
+        url += `&channel=${channelStr}`
+      }
     }
-  }
-  return axios.get(url)
+    return axios.get(url)
+  } else return { data: [] }
 }

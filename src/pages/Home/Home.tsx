@@ -1,10 +1,6 @@
-import React, { Fragment } from 'react'
-import { List } from '../List/List'
+import React from 'react'
+import { List } from '../List'
 
 export const Home: React.FC = () => {
-  return (
-    <Fragment>
-      <List />
-    </Fragment>
-  )
+  return <List />
 }

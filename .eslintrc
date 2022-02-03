@@ -1,7 +1,7 @@
 {
   "root": true,
   "parser": "@typescript-eslint/parser",
-  "plugins": ["@typescript-eslint"],
+  "plugins": ["@typescript-eslint", "react-hooks"],
   "extends": ["airbnb-typescript", "plugin:prettier/recommended"],
   "env": {
     "jest": true
@@ -16,7 +16,9 @@
     "@typescript-eslint/object-curly-spacing": "off",
     "react/jsx-filename-extension": [0],
     "import/extensions": "off",
-    "import/no-extraneous-dependencies": "off"
+    "import/no-extraneous-dependencies": "off",
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn"
   },
   "overrides": [
     {
