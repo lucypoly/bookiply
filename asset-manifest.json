@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.5a5503df.css",
-    "main.js": "/static/js/main.a1d3fd48.js",
-    "static/media/background.png": "/static/media/background.73d5f8b0143508b578a7.png",
-    "static/media/BOOKINGCOM.svg": "/static/media/BOOKINGCOM.8ea33a55166523bc219b71f9d5c92652.svg",
-    "static/media/AIRBNB.svg": "/static/media/AIRBNB.f8f22ed65705d79d11a09c593946c188.svg",
-    "static/media/HOLIDU.svg": "/static/media/HOLIDU.d01da7f62e3f41136bf5c320184b78b9.svg",
-    "static/media/thumb-up.svg": "/static/media/thumb-up.d8060c3ef66a0ca88b584f493d18058b.svg",
-    "static/media/thumb-down.svg": "/static/media/thumb-down.f654ac47acb71cfbbc37d6597e6f22c3.svg",
-    "index.html": "/index.html",
-    "main.5a5503df.css.map": "/static/css/main.5a5503df.css.map",
-    "main.a1d3fd48.js.map": "/static/js/main.a1d3fd48.js.map"
+    "main.css": "/bookiply/static/css/main.ed6a708e.css",
+    "main.js": "/bookiply/static/js/main.25d3f788.js",
+    "static/media/background.png": "/bookiply/static/media/background.73d5f8b0143508b578a7.png",
+    "static/media/BOOKINGCOM.svg": "/bookiply/static/media/BOOKINGCOM.8ea33a55166523bc219b71f9d5c92652.svg",
+    "static/media/AIRBNB.svg": "/bookiply/static/media/AIRBNB.f8f22ed65705d79d11a09c593946c188.svg",
+    "static/media/HOLIDU.svg": "/bookiply/static/media/HOLIDU.d01da7f62e3f41136bf5c320184b78b9.svg",
+    "static/media/thumb-up.svg": "/bookiply/static/media/thumb-up.d8060c3ef66a0ca88b584f493d18058b.svg",
+    "static/media/thumb-down.svg": "/bookiply/static/media/thumb-down.f654ac47acb71cfbbc37d6597e6f22c3.svg",
+    "index.html": "/bookiply/index.html",
+    "main.ed6a708e.css.map": "/bookiply/static/css/main.ed6a708e.css.map",
+    "main.25d3f788.js.map": "/bookiply/static/js/main.25d3f788.js.map"
   },
   "entrypoints": [
-    "static/css/main.5a5503df.css",
-    "static/js/main.a1d3fd48.js"
+    "static/css/main.ed6a708e.css",
+    "static/js/main.25d3f788.js"
   ]
 }
