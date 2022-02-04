@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter, Switch, Route } from 'react-router-dom'
+import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom'
 import { Container } from '@mui/material'
 
 import { Navbar } from './components'
@@ -18,6 +18,9 @@ const App: React.FC = () => {
             <Route path={Routes.Home} component={Home} exact />
             <Route path={Routes.Reviews} component={List} exact />
             <Route path={Routes.Review} component={Reviews} exact />
+            <Route path={Routes.Bookiply} exact>
+              <Redirect to={Routes.Home} />
+            </Route>
           </Switch>
         </Container>
       </Container>
