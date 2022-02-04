@@ -1,6 +1,6 @@
 ## Visit deployed version
 
-https://lucypoly.github.io
+https://lucypoly.github.io/
 
 ## Available Scripts
 
