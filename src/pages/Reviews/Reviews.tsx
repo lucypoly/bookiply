@@ -6,10 +6,11 @@ import { filterReviews, paginateReviews } from '../../features/reviews/slice'
 import {
   selectFilters,
   selectItems,
+  selectStatus,
   selectTotal,
 } from '../../features/reviews/selectors'
 import { Review } from '../Review'
-import { ID, PER_PAGE } from '../../constants'
+import { ID, PER_PAGE, RequestStatus } from '../../constants'
 import { Filters, Pagination } from '../../components'
 import { Filters as FiltersType } from '../../features/reviews/types'
 
@@ -20,15 +21,16 @@ export const Reviews: React.FC = React.memo(() => {
   const items = useSelector(selectItems)
   const total = useSelector(selectTotal)
   const filtersState = useSelector(selectFilters)
+  const status = useSelector(selectStatus)
 
   const [page, setPage] = useState(1)
 
   useEffect(() => {
-    if (!items.length) {
+    if (status === RequestStatus.NotAsked) {
       dispatch(filterReviews({ filters: filtersState }))
       dispatch(paginateReviews({ page }))
     }
-  }, [dispatch, filtersState, items.length, page])
+  }, [dispatch, filtersState, items.length, page, status])
 
   const handlePageChange = useCallback(
     (value: number) => {

@@ -15,7 +15,7 @@ import {
   ReviewState,
 } from './types'
 import { RootState } from '../../store'
-import { Channel, RequestStatus } from '../../constants'
+import { Channel, INITIAL_SCORE, RequestStatus } from '../../constants'
 import { getReviews } from './helpers'
 
 export const paginateReviews = createAsyncThunk<
@@ -62,7 +62,7 @@ export const initialReviewState: ReviewState = {
   items: [],
   total: 0,
   filters: {
-    score: null,
+    score: INITIAL_SCORE,
     channels: [Channel.HOLIDU, Channel.BOOKINGCOM, Channel.AIRBNB],
   },
   page: null,

@@ -2,7 +2,7 @@ import React, { useCallback, useEffect, useState } from 'react'
 
 import { Checkbox, FormControlLabel, Slider } from '@mui/material'
 import { Filters as FiltersType } from '../../features/reviews/types'
-import { Channel } from '../../constants'
+import { Channel, INITIAL_SCORE } from '../../constants'
 
 import styles from './Filters.module.css'
 import { useSelector } from 'react-redux'
@@ -23,6 +23,8 @@ export const Filters: React.FC<FiltersProps> = React.memo(
     const [channels, setChannels] = useState<FiltersType['channels']>(
       filters.channels
     )
+
+    debugger
 
     const handleScoreChange = useCallback(
       (event: React.SyntheticEvent | Event, value: number | Array<number>) => {
@@ -52,7 +54,7 @@ export const Filters: React.FC<FiltersProps> = React.memo(
         <div className={styles.score}>
           <p>Minimum score</p>
           <Slider
-            defaultValue={30}
+            defaultValue={INITIAL_SCORE}
             getAriaValueText={valuetext}
             valueLabelDisplay="auto"
             onChangeCommitted={handleScoreChange}

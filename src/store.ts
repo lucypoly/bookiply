@@ -1,4 +1,5 @@
 import { configureStore } from '@reduxjs/toolkit'
+
 import { reviewSlice } from './features/reviews/slice'
 
 const store = configureStore({

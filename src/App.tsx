@@ -3,7 +3,6 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import { Container } from '@mui/material'
 
 import { Navbar } from './components'
-
 import { Home, List, Reviews } from './pages'
 import { Routes } from './constants'
 
